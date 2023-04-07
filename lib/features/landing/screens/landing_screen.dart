@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/colors.dart';
 import 'package:whatsapp_ui/features/auth/screens/login_screen.dart';
 
-import '../../../common/custom_bottom.dart';
+import '../../../common/widgets/custom_bottom.dart';
 
 class LandingScreen extends StatelessWidget {
   const LandingScreen({Key? key}) : super(key: key);

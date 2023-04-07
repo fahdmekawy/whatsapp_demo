@@ -1,9 +1,10 @@
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsapp_ui/common/custom_bottom.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:whatsapp_ui/features/auth/controller/auth_controller.dart';
-import 'package:whatsapp_ui/utils/utils.dart';
+
+import '../../../common/utils/utils.dart';
+import '../../../common/widgets/custom_bottom.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
   static const routeName = '/login-screen';
@@ -20,8 +21,8 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
   @override
   void dispose() {
-    phoneController.dispose();
     super.dispose();
+    phoneController.dispose();
   }
 
   void pickCountry() {

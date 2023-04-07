@@ -44,9 +44,11 @@ dependencies:
 
   #pickers
   country_picker: ^2.0.20
+  image_picker: ^0.8.7+1
+  flutter_contacts: ^1.1.6
 
   #utils
-  change_app_package_name: ^1.1.0
+  uuid: ^3.0.7
 
   #state management
   flutter_riverpod: ^2.3.2
