@@ -1,3 +1,4 @@
+import 'package:enough_giphy_flutter/enough_giphy_flutter.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 
@@ -19,4 +20,34 @@ Future<File?> pickImageFromGallery(BuildContext context) async {
     showSnackBar(context: context, content: e.toString());
   }
   return image;
+}
+
+Future<File?> pickVideoFromGallery(BuildContext context) async {
+  File? video;
+  try {
+    final pickedVideo =
+        await ImagePicker().pickVideo(source: ImageSource.gallery);
+    if (pickedVideo != null) {
+      video = File(pickedVideo.path);
+    }
+  } catch (e) {
+    showSnackBar(context: context, content: e.toString());
+  }
+  return video;
+}
+
+Future<GiphyGif?> pickGIF(BuildContext context) async {
+  GiphyGif? gif;
+
+  /// ApiKey From Giphy SDK
+  try {
+    gif = await Giphy.getGif(
+      context: context,
+      apiKey: 'Bf3W7gx5RnHT9WkX7CIg0j420R0NItLx',
+    );
+  } catch (e) {
+    showSnackBar(context: context, content: e.toString());
+  }
+
+  return gif;
 }
