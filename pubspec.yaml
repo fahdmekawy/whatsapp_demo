@@ -54,6 +54,12 @@ dependencies:
   intl: ^0.17.0
   cached_network_image: ^3.2.3
   cached_video_player: ^2.0.4
+  flutter_sound: ^9.2.13
+  permission_handler: ^10.2.0
+  path_provider: ^2.0.14
+  audioplayers: ^3.0.1
+  swipe_to: ^1.0.2
+
 
   #state management
   flutter_riverpod: ^2.3.2
